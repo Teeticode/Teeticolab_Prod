@@ -1,0 +1,20 @@
+:root {
+  --primary: #5380ea;
+  --textPrimary: #0f172a;
+  --secondary: #e54a2a;
+  --desc: #767676;
+  --boxShadowColor: rgba(83, 128, 234, 0.2);
+  --transparent: rgba(255, 255, 255, 0.15);
+  --borderColor: #dee6ff;
+  --background: #ebf0ff;
+}
+.home,
+html,
+body {
+  background-color: var(--background);
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
