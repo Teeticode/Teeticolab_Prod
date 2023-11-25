@@ -1,11 +1,31 @@
-import logo from "../../assets/images/logo.png";
-import { cilMenu, cilX } from "@coreui/icons";
+import { cilMenu, cilX, cilMoon, cilSun } from "@coreui/icons";
 import CIcon from "@coreui/icons-react";
 import "./style.css";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect } from "react";
+import ThemeContext from "../../contexts/ThemeProvider";
 const Header = () => {
-  const [open, setOpen] = useState(false);
-  const navRef = useRef();
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    let root = document.querySelector<any>(":root");
+    if (theme == "true") {
+      root?.style?.setProperty("--background", "#161513");
+      root?.style.setProperty("--textPrimary", "#fff");
+    } else {
+      root?.style?.setProperty("--background", "#ebf0ff");
+      root?.style?.setProperty("--textPrimary", "#0f172a");
+    }
+  }, [theme]);
+  useEffect(() => {
+    let root = document.querySelector<any>(":root");
+    if (theme == "true") {
+      root?.style?.setProperty("--background", "#161513");
+      root?.style.setProperty("--textPrimary", "#fff");
+    } else {
+      root?.style?.setProperty("--background", "#ebf0ff");
+      root?.style?.setProperty("--textPrimary", "#0f172a");
+    }
+  }, []);
   const getNav = () => {
     let sidenav = document.querySelector(".sidenav");
     sidenav?.classList.remove("hide");
@@ -29,8 +49,39 @@ const Header = () => {
           <li className="nav-link">Testimonials</li>
         </ul>
       </div>
-      <div className="contact">
-        <button className="btnPrimary">Contact Me</button>
+      <div className="right">
+        <div>
+          {theme ? (
+            <CIcon
+              icon={cilSun}
+              size="custom"
+              style={{
+                width: "20px",
+                height: "20px",
+                marginTop: "20px",
+                marginBottom: "20px",
+              }}
+              className="mode"
+              onClick={() => toggleTheme(!theme)}
+            />
+          ) : (
+            <CIcon
+              icon={cilMoon}
+              size="custom"
+              style={{
+                width: "20px",
+                height: "20px",
+                marginTop: "20px",
+                marginBottom: "20px",
+              }}
+              className="mode"
+              onClick={() => toggleTheme(!theme)}
+            />
+          )}
+        </div>
+        <div className="contact">
+          <button className="btnPrimary">Contact Me</button>
+        </div>
       </div>
 
       <div className="sidebar">
@@ -58,6 +109,38 @@ const Header = () => {
           <li className="side-link">Portfolio</li>
           <li className="side-link">About Us</li>
           <li className="side-link">Testimonials</li>
+          <div>
+            {theme ? (
+              <CIcon
+                icon={cilSun}
+                size="custom"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                }}
+                className="mode"
+                onClick={() => toggleTheme(!theme)}
+              />
+            ) : (
+              <CIcon
+                icon={cilMoon}
+                size="custom"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                }}
+                className="mode"
+                onClick={() => toggleTheme(!theme)}
+              />
+            )}
+          </div>
+          <div className="contact">
+            <button className="btnPrimary">Contact Me</button>
+          </div>
         </ul>
       </div>
     </header>
