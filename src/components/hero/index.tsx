@@ -6,14 +6,7 @@ const Hero = () => {
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="avatar">
-          <div
-            className="avatar-image"
-            style={{
-              backgroundImage: `url(${avatar})`,
-              width: "50px",
-              height: "50px",
-            }}
-          ></div>
+          <img className="avatar_img" src={avatar} />
         </div>
         <div className="hero-title">
           <h1 className="title">
@@ -21,12 +14,14 @@ const Hero = () => {
           </h1>
         </div>
         <div className="hero-desc">
-          <p>
+          <p className="desc">
             I am a seasoned full-stack software engineer with over 8 years of
-            professional experience, specializing in backend development. My
-            expertise lies in crafting robust and scalable SaaS-based
-            architectures on the Amazon AWS platform.
+            professional experience, specializing in backend development.
           </p>
+        </div>
+        <div className="hero_buttons">
+          <button className="get_in_touch">Get In Touch</button>
+          <button className="cv">Download CV</button>
         </div>
       </div>
     </section>

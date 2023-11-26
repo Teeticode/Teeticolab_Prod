@@ -8,6 +8,7 @@
   --transparent: rgba(255, 255, 255, 0.15);
   --borderColor: #dee6ff;
   --background: #ebf0ff;
+  --descText: #c5c5c5;
 }
 .home,
 html,
@@ -25,4 +26,11 @@ button,
 li {
   cursor: pointer;
   font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+a {
+  text-decoration: none;
+  color: var(--textPrimary);
+}
+.reactour__popover {
+  color: "black" !important;
 }

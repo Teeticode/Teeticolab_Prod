@@ -4,9 +4,7 @@ import Home from "./pages/Home.tsx";
 function App() {
   return (
     <ThemeProvider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Home />
     </ThemeProvider>
   );
 }

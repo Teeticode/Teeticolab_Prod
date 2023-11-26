@@ -11,9 +11,11 @@ const Header = () => {
     if (theme == "true") {
       root?.style?.setProperty("--background", "#161513");
       root?.style.setProperty("--textPrimary", "#fff");
+      root?.style.setProperty("--descTxt", "#c5c5c5");
     } else {
       root?.style?.setProperty("--background", "#ebf0ff");
       root?.style?.setProperty("--textPrimary", "#0f172a");
+      root?.style.setProperty("--descTxt", "--textPrimary");
     }
   }, [theme]);
   useEffect(() => {
@@ -21,9 +23,11 @@ const Header = () => {
     if (theme == "true") {
       root?.style?.setProperty("--background", "#161513");
       root?.style.setProperty("--textPrimary", "#fff");
+      root?.style.setProperty("--descTxt", "#c5c5c5");
     } else {
       root?.style?.setProperty("--background", "#ebf0ff");
       root?.style?.setProperty("--textPrimary", "#0f172a");
+      root?.style.setProperty("--descTxt", "--textPrimary");
     }
   }, []);
   const getNav = () => {
@@ -43,7 +47,9 @@ const Header = () => {
       </div>
       <div className="links">
         <ul className="nav">
-          <li className="nav-link">Services</li>
+          <li className="nav-link">
+            <a href="#hero">Services</a>
+          </li>
           <li className="nav-link">Portfolio</li>
           <li className="nav-link">About Us</li>
           <li className="nav-link">Testimonials</li>

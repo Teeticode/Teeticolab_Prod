@@ -4,11 +4,14 @@ import { themeInterface } from "../type";
 import Header from "../components/header";
 import "./home.css";
 import Hero from "../components/hero";
+import { useTour } from "@reactour/tour";
 import About from "../components/about";
 type props = {};
 const Home: React.FC<props> = () => {
   const { theme, toggleTheme } = useContext<themeInterface>(ThemeContext);
+  const { setIsOpen } = useTour();
   useEffect(() => {
+    setIsOpen(true);
     if (theme == "true") {
       console.log("true is here");
     } else {
