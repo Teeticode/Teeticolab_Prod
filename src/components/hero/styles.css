@@ -29,13 +29,14 @@
   width: 50%;
 }
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: linear-gradient(#ff8660, #8000ff);
   border-radius: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 .avatar_img {
   width: 80px;

@@ -21,7 +21,7 @@ const Header = () => {
   useEffect(() => {
     let root = document.querySelector<any>(":root");
     if (theme == "true") {
-      root?.style?.setProperty("--background", "#161513");
+      root?.style?.setProperty("--background", "#0F172A");
       root?.style.setProperty("--textPrimary", "#fff");
       root?.style.setProperty("--descTxt", "#c5c5c5");
     } else {
