@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   flex-direction: "column" !important;
   transition: 0.2s all ease-in;
+  background-color: var(--background) !important;
 }
 .hero-content {
   display: flex;

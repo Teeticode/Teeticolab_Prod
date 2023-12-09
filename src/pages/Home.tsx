@@ -12,19 +12,17 @@ const Home: React.FC<props> = () => {
   const { setIsOpen } = useTour();
   useEffect(() => {
     setIsOpen(true);
-    if (theme == "true") {
-      console.log("true is here");
-    } else {
-      console.log("false is here");
-    }
+    console.log(typeof theme);
 
     let root = document.querySelector<any>(":root");
-    if (theme) {
+    if (theme === true) {
       root?.style?.setProperty("--background", "#161513");
       root?.style.setProperty("--textPrimary", "#fff");
+      root?.style.setProperty("--primaryLight", "#121212");
     } else {
-      root?.style?.setProperty("--background", "#ebf0ff");
+      root?.style?.setProperty("--background", "#fff");
       root?.style?.setProperty("--textPrimary", "#0f172a");
+      root?.style.setProperty("--primaryLight", "#fff");
     }
   }, []);
   useEffect(() => {
@@ -32,9 +30,11 @@ const Home: React.FC<props> = () => {
     if (theme) {
       root?.style?.setProperty("--background", "#161513");
       root?.style.setProperty("--textPrimary", "#fff");
+      root?.style.setProperty("--primaryLight", "#121212");
     } else {
       root?.style?.setProperty("--background", "#ebf0ff");
       root?.style?.setProperty("--textPrimary", "#0f172a");
+      root?.style.setProperty("--primaryLight", "#fff");
     }
   }, [theme]);
   return (

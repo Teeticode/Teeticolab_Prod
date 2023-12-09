@@ -3,5 +3,38 @@
   justify-content: center;
   display: flex;
   height: 100vh;
-  background-color: wheat;
+  background-color: var(--primaryLight) !important;
+}
+.container {
+  flex-direction: row;
+  display: flex;
+  padding: 0px 0px 50px 50px;
+  justify-content: space-between;
+  width: 100%;
+}
+.desc_container {
+  width: 50%;
+  height: 100% !important;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+.title_about {
+  color: var(--primary) !important;
+  font-size: 20px;
+  font-weight: 700;
+}
+.desc_about {
+  flex-wrap: wrap;
+  display: flex;
+  color: var(--textPrimary) !important;
+  font-size: 36px !important;
+  text-transform: capitalize;
+}
+.boxes {
+  width: "50%";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }

@@ -15,14 +15,6 @@ const steps = [
 ];
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <TourProvider
-      steps={steps}
-      disableInteraction={true}
-      disableKeyboardNavigation={true}
-      scrollSmooth={false}
-      disableFocusLock={false}
-    >
-      <App />
-    </TourProvider>
+    <App />
   </React.StrictMode>
 );
