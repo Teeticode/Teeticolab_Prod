@@ -15,7 +15,7 @@
 .desc_container {
   width: 50%;
   height: 100% !important;
-  padding: 15px;
+  padding: 2px;
   flex-wrap: wrap;
 }
 .title_about {
@@ -29,12 +29,55 @@
   color: var(--textPrimary) !important;
   font-size: 36px !important;
   text-transform: capitalize;
+  font-weight: 900;
 }
 .boxes {
-  width: "50%";
+  width: 50%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+.box {
+  background-color: #fff;
+  margin: 8px;
+  height: 140px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+  border-top: 10px solid var(--primary);
+}
+.action {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  justify-self: flex-end !important;
+  width: 40px;
+  height: 40px;
+  color: var(--background);
+  background-color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all ease-in;
+}
+.title_box {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.icon {
+  color: var(--textPrimary);
+}
+.box:hover {
+  background-color: black;
+  transition: 0.3s all ease-in;
+  color: #fff;
 }

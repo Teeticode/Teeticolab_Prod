@@ -1,4 +1,6 @@
 import "./styles.css";
+import { cilMenu, cilX, cilMoon, cilSun, cilShare } from "@coreui/icons";
+import CIcon from "@coreui/icons-react";
 
 const About = () => {
   return (
@@ -15,19 +17,59 @@ const About = () => {
         <div className="boxes">
           <div className="box">
             <p className="title_box">Web Design & Web Development</p>
-            <button className="action">check</button>
+            <button className="action">
+              <CIcon
+                icon={cilShare}
+                size="custom"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                }}
+                className="icon"
+              />
+            </button>
           </div>
           <div className="box">
             <p className="title_box">Web Design & Web Development</p>
-            <button className="action">check</button>
+            <button className="action">
+              <CIcon
+                icon={cilShare}
+                size="custom"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                }}
+                className="icon"
+              />
+            </button>
           </div>
           <div className="box">
             <p className="title_box">Web Design & Web Development</p>
-            <button className="action">check</button>
+            <button className="action">
+              <CIcon
+                icon={cilShare}
+                size="custom"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                }}
+                className="icon"
+              />
+            </button>
           </div>
           <div className="box">
             <p className="title_box">Web Design & Web Development</p>
-            <button className="action">check</button>
+            <button className="action">
+              <CIcon
+                icon={cilShare}
+                size="custom"
+                style={{
+                  width: "20px",
+                  height: "20px",
+                }}
+                className="icon"
+              />
+            </button>
           </div>
         </div>
       </div>
